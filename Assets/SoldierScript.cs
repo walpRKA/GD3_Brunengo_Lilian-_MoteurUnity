@@ -21,16 +21,16 @@ public class SoldierScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKey(KeyCode.I))
         {
             Debug.Log("OOOOH");
-            speed += 1;
+            speed += Time.deltaTime;
 
         }
 
         if (Input.GetKeyUp(KeyCode.I))
         {
-            speed -= 1;
+            speed = 0.0f;
         }
 
         if (Input.GetKeyDown(KeyCode.E))
